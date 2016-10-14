@@ -44,15 +44,6 @@ public class Main {
                 encr_buckets.get(längd - 1).add(encrypt[i]);
             }
 
-        /*for (int j = 0; j < 16; j++) {
-            if(!encr_buckets.get(j).isEmpty()) {
-                for (int i = 0; i < encr_buckets.get(j).size(); i++) {
-                    System.out.print(encr_buckets.get(j).get(i)+" ");
-                }
-            }
-            System.out.println("");
-        }*/
-
             int longest = 0;
             // Find the first longest bucket
             for (int i = 15; i >= 0; i--) {
@@ -243,8 +234,6 @@ public class Main {
         loop: for (int i = 0; i < encr_word.length(); i++) { //spelar ingen roll vilken längd, båda orden är lika långa.
             String e = Character.toString(encr_word.charAt(i));
             String d = Character.toString(dict_word.charAt(i));
-            //System.out.println(dict_to_word.get(e) == null);
-            //System.out.println(word_to_dict.get(d) == null);
             if (dict_to_word.get(e) == null) { // om det är tomt på den platsen --> vi kan matcha.
                 if (word_to_dict.get(d) == null) {
                     word_to_dict.put(d, e);
