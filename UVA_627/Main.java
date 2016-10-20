@@ -87,7 +87,7 @@ public class Main {
         Arrays.fill(distance_arr, Integer.MAX_VALUE);
         int [] parent_arr = new int[nodes.size()];
         Arrays.fill(parent_arr,-5);
-        nodes.get(start).setDistance(0);    //Dubbelkolla! Inte säker att t.ex. nod 2 har id 2, borde dock vara så eftersom de läggs till i ordning i detta problem...
+        nodes.get(start).setDistance(0); 
         distance_arr[start] = 0;
         if (start == end)
         {
@@ -132,9 +132,6 @@ public class Main {
         private int parentID;
         private int distance;
 
-
-        //public void set(T t){this.t = t;}
-        //public T get(){return this.t;}
         public void addAdjacentNode(int ID){
             this.adjacentNodes.add(ID);
         }
@@ -177,7 +174,7 @@ public class Main {
         }
 
         public boolean isIncident(Edge e){
-            return incidentEdges.contains(e); // check if it really works.
+            return incidentEdges.contains(e);
         }
     }
 
@@ -201,7 +198,7 @@ public class Main {
             return this.explored;
         }
 
-        public void setExplored(){this.explored = true;} //Double check if it actually gets set.
+        public void setExplored(){this.explored = true;}
 
         public T getVertex1(){return this.vertex1;}
         public T getVertex2(){return this.vertex2;}
